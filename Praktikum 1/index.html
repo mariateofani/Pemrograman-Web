@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pengenalan Kampus UNS</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://uns.ac.id/id/wp-content/uploads/2020/01/FOTO-GEDUNG-REKTORAT-UNS.jpg" alt="Gambar Universitas">
+            <h1>Selamat Datang di Universitas Sebelas Maret (UNS)</h1>
+        </header>
+
+        <h2>Daftar Fakultas dan Program Studi</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Fakultas</th>
+                    <th>Program Studi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA)</td>
+                    <td>Matematika, Fisika, Kimia, Biologi, Farmasi, Statistika, Ilmu Lingkungan</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Fakultas Teknik (FT)</td>
+                    <td>Teknik Sipil, Arsitektur, Teknik Mesin, Teknik Industri, Teknik Kimia, Teknik Elektro, Perancangan Wilayah dan Kota</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Fakultas Ekonomi dan Bisnis (FEB)</td>
+                    <td>Manajemen, Akuntansi, Ekonomi Pembangunan, Bisnis Digital</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Falkultas Kedokteran</td>
+                    <td>Kedokteran, Psikolog, Tenaga dan Keselamatan Kerja</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Falkultas Teknik</td>
+                    <td>Teknik Informatika,Teknik Mesin,Teknik Perkapalan,Teknik Fisika,Teknik Industri</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="https://uns.ac.id/id/informasi-akademik/daftar-program-studi/" target="_blank" class="btn-resmi">
+            Lihat Fakultas & Prodi Selengkapnya
+        </a>
+
+        <h2>Daftar Kampus PSDKU / Cabang UNS</h2>
+        <div class="daftar_kampus">
+            <ul>
+                <li><a href="https://pgsdkebumen.fkip.uns.ac.id/" target="_blank">Kampus UNS Kebumen</a></li>
+                <li><a href="https://vokasi.uns.ac.id/teknik-informatika-psdku-madiun/" target="_blank">Kampus UNS PSDKU Madiun (Caruban)</a></li>
+                <li><a href="https://d3ti.vokasi.uns.ac.id/fasilitas" target="_blank">Kampus UNS Mesen</a></li>
+            </ul>
+        </div>
+
+        <div class="form-section">
+            <h2>Buku Tamu Mahasiswa Baru</h2>
+            <form name="myform" onsubmit="sambutanUser(event)">
+                <label for="nama_input" style="display: block; margin-bottom: 10px;">Masukkan Nama Anda:</label>
+                <input type="text" id="nama_input" name="nama" placeholder="Contoh: Budi Santoso" required>
+                <button type="submit">Masuk</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
