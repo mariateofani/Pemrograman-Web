@@ -1,21 +1,25 @@
 body{
 font-family: Arial, sans-serif;
-background:#eef5f9;
+background:linear-gradient(135deg, #ade9fc, #f0fcf3, #b8fadb, #9acdfc) ;
 margin:0;
 }
 
 /* HEADER WEBSITE */
 header{
-background:#2c7be5;
+background: linear-gradient(135deg, #ccedf7, #3b86f7, #3b86f7, #9acdfc) ;
 color:white;
 display:flex;
 align-items:center;
 padding:15px;
+box-shadow:0 10px 20px rgba(20, 4, 247, 0.1);
 }
 
 header img{
 width:60px;
+padding: auto;
 margin-right:15px;
+margin-left: 30px;
+mix-blend-mode: multiply;
 }
 
 /* container utama */
@@ -31,12 +35,13 @@ background:white;
 padding:12px;
 text-align:center;
 margin-bottom:20px;
+border-radius:8px;
 }
 
 /* card / kotak */
 .card{
 background:white;
-padding:20px;
+padding:30px;
 margin-bottom:20px;
 border-radius:8px;
 box-shadow:0 2px 6px rgba(0,0,0,0.1);
@@ -73,7 +78,7 @@ height:80px;
 button{
 width:100%;
 padding:12px;
-background:#27ae60;
+background:#3fbe74;
 color:white;
 border:none;
 border-radius:5px;
@@ -82,7 +87,7 @@ cursor:pointer;
 }
 
 button:hover{
-background:#1e874b;
+background:#4093f1;
 }
 
 /* pesan sukses */
