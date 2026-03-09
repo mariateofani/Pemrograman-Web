@@ -30,12 +30,12 @@ header img {
 }
 
 h1 {
-    color: #004a87; /* Warna Biru UNS */
+    color: #004687; /* Warna Biru UNS */
     margin-top: 15px;
 }
 
 h1 {
-  color: #004a87; /* Warna Biru UNS */
+  color: #067be7; /* Warna Biru UNS */
   margin-top: 15px;
 }
 
@@ -47,7 +47,7 @@ table {
 }
 
 table, th, td {
-  border: 1px solid #ddd;
+  border: 1px solid #102779;
 }
 
 th, td {
@@ -56,20 +56,20 @@ th, td {
 }
 
 th {
-  background-color: #004a87;
+  background-color: #0259ac;
   color: #ffffff;
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #e8f9fa;
 }
 
 /* Styling Tombol */
 .btn-resmi {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #ffc107;
-  color: #000;
+  background-color: #b5f2fd;
+  color: #1c2f41;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
@@ -78,7 +78,7 @@ tr:nth-child(even) {
 }
 
 .btn-resmi:hover {
-  background-color: #e0a800;
+  background-color: #6fc4f5;
 }
 
 /* Styling List PSDKU */
@@ -104,7 +104,7 @@ tr:nth-child(even) {
 
 /* Efek Hover untuk List Item */
 .daftar_kampus li:hover {
-  background-color: #004a87;
+  background-color: #6fc4f5;
   color: white;
   cursor: pointer;
 }
@@ -126,7 +126,7 @@ tr:nth-child(even) {
 
 .form-section h2 {
   color: #333333;
-  border-bottom: 2px solid #004a87;
+  border-bottom: 2px solid #1e7ac5;
   padding-bottom: 10px;
   display: inline-block;
 }
@@ -148,8 +148,8 @@ tr:nth-child(even) {
 .form-section button {
   padding: 12px 20px;
   margin: 10px auto;
-  background-color: #004a87;
-  color: white;
+  background-color: #b5f2fd;
+  color: rgb(21, 65, 114);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -159,5 +159,5 @@ tr:nth-child(even) {
 }
 
 .form-section button:hover {
-  background-color: #003366;
+  background-color: #6fc4f5;
 }
