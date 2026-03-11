@@ -1,0 +1,121 @@
+body{
+    font-family: Arial, sans-serif;
+    background:linear-gradient(135deg, #ade9fc, #f0fcf3, #b8fadb, #9acdfc) ;
+    margin:0;
+}
+
+.hero{
+    background-image:url("https://images.unsplash.com/photo-1580281657527-47d3c5f64f0b");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    padding:120px 20px;
+}
+
+.hero h1{
+    font-size:45px;
+    font-weight:bold;
+}
+
+.login-box{
+    width:350px;
+}
+
+.card img{
+    height:200px;
+    object-fit:cover;
+}
+
+/* HEADER WEBSITE */
+header{
+    background: linear-gradient(135deg, #ccedf7, #3b86f7, #3b86f7, #9acdfc) ;
+    color:white;
+    display:flex;
+    align-items:center;
+    padding:15px;
+    box-shadow:0 10px 20px rgba(20, 4, 247, 0.1);
+}
+
+header img{
+    width:60px;
+    padding: auto;
+    margin-right:15px;
+    margin-left: 30px;
+    mix-blend-mode: multiply;
+}
+
+/* container utama */
+.container{
+    width:650px;
+    margin:auto;
+    margin-top:30px;
+}
+
+/* intro text */
+.intro{
+    background:white;
+    padding:12px;
+    text-align:center;
+    margin-bottom:20px;
+    border-radius:8px;
+}
+
+/* card / kotak */
+.card{
+    background:white;
+    padding:30px;
+    margin-bottom:20px;
+    border-radius:8px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* input */
+input, select, textarea{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    margin-bottom:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+/* radio */
+input[type="radio"]{
+    width:auto;
+    margin-right:6px;
+}
+
+/* label */
+label{
+    display:block;
+    margin-bottom:5px;
+}
+
+/* textarea */
+    textarea{
+    height:80px;
+}
+
+/* tombol */
+button{
+    width:100%;
+    padding:12px;
+    background:#3fbe74;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#4093f1;
+}
+
+/* pesan sukses */
+#pesan{
+    text-align:center;
+    margin-top:15px;
+    font-weight:bold;
+    color:green;
+}
