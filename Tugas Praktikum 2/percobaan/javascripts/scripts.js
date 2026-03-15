@@ -1,14 +1,19 @@
-function sambutUser(event) {
+// mengambil elemen form
+const form = document.getElementById("surveyForm");
 
-  // Mencegah halaman web melakukan refresh otomatis saat form disubmit
-  event.preventDefault();
+// mengambil tempat untuk menampilkan pesan
+const pesan = document.getElementById("pesan");
 
-  // Mengambil nilai dari form 'myForm' dan input yang bernama 'nama'
-  var namaUser = document.forms["myForm"]["nama"].value;
+// event ketika tombol kirim ditekan
+form.addEventListener("submit", function(event){
 
-  // Menampilkan pop-up alert
-  alert("Hallo " + namaUser + " selamat datang!");
+// mencegah halaman reload
+event.preventDefault();
 
-  // Opsional: Mengosongkan form setelah disubmit
-  document.forms["myForm"].reset();
-}
+// menampilkan pesan berhasil
+pesan.innerHTML = "Terima kasih! Survei Anda berhasil dikirim.";
+
+// mengosongkan form kembali
+form.reset();
+
+});
