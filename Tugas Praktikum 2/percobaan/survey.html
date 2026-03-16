@@ -1,127 +1,141 @@
-<!DOCTYPE html>
-    <html lang="id">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Sistem Survei Kepuasan Pasien</title>
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Survei Kepuasan Pasien</title>
 
-            <!-- Menghubungkan file CSS -->
-            <link rel="stylesheet" href="css/style.css">
-        </head>
-        
-        <body>
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-        <!-- HEADER WEBSITE -->
-            <header>
-            <!-- Logo instansi -->
-                <img src="https://down-id.img.susercontent.com/file/8bac08e36a5b3c2a943b8d356bf1bbbd@resize_w450_nl.webp" alt="Logo Kesehatan">
+  <body>
+    <!-- HEADER WEBSITE -->
+    <header>
+      <!-- Logo instansi -->
+      <img
+        src="https://down-id.img.susercontent.com/file/8bac08e36a5b3c2a943b8d356bf1bbbd@resize_w450_nl.webp"
+        alt="Logo Kesehatan"
+      />
 
-            <!-- Judul instansi -->
-                <div>
-                    <h1>Sistem Survei Kepuasan Pasien</h1>
-                </div>
+      <!-- Judul instansi -->
+       
+      <div>
+        <h1>Sistem Survei Kepuasan Pasien</h1>
+      </div>
+    </header>
+    <div class="container">
+      <p class="intro">
+        Silakan mengisi data dan menjawab pertanyaan survei berikut untuk
+        membantu kami meningkatkan kualitas pelayanan kesehatan.
+      </p>
 
-            </header>
-            <div class="container">
-                <p class="intro"> Silakan mengisi data dan menjawab pertanyaan survei berikut untuk membantu kami meningkatkan kualitas pelayanan kesehatan.</p>
+      <div class="container-button">
+        <a href="index.html" class="btn-kembali">← Kembali ke Home</a>
+      </div>
 
-            <form id="surveyForm">
+      <form id="surveyForm">
+        <!-- ========================= -->
+        <!-- BAGIAN DATA PASIEN -->
+        <!-- ========================= -->
 
-            <!-- ========================= -->
-            <!-- BAGIAN DATA PASIEN -->
-            <!-- ========================= -->
+        <div class="card">
+          <h2>Data Pasien</h2>
+          <label>Nama Pasien</label>
+          <input type="text" placeholder="Masukkan nama anda" required />
+          <label>Umur</label>
+          <input type="number" placeholder="Masukkan umur anda" required />
+          <label>Jenis Kelamin</label>
+          <select required>
+            <option value="">Pilih Jenis Kelamin</option>
+            <option>Laki-laki</option>
+            <option>Perempuan</option>
+          </select>
+        </div>
 
-                <div class="card">
-                    <h2>Data Pasien</h2>
-                        <label>Nama Pasien</label>
-                        <input type="text" placeholder="Masukkan nama anda" required>
-                        <label>Umur</label>
-                        <input type="number" placeholder="Masukkan umur anda" required>
-                        <label>Jenis Kelamin</label>
-                            <select required>
-                                <option value="">Pilih Jenis Kelamin</option>
-                                <option>Laki-laki</option>
-                                <option>Perempuan</option>
-                            </select>
-                </div>
-                
-            <!-- ========================= -->
-            <!-- BAGIAN PERTANYAAN SURVEI -->
-            <!-- ========================= -->
-                <div class="card">
-                    <h2>Pertanyaan Survei Kepuasan</h2>
-                        <p>1. Bagaimana keramahan petugas kesehatan?</p>
-                            <label><input type="radio" name="q1" required> Sangat Baik</label>
-                            <label><input type="radio" name="q1"> Baik</label>
-                            <label><input type="radio" name="q1"> Cukup</label>
-                            <label><input type="radio" name="q1"> Kurang</label>
+        <!-- ========================= -->
+        <!-- BAGIAN PERTANYAAN SURVEI -->
+        <!-- ========================= -->
+        <div class="card">
+          <h2>Pertanyaan Survei Kepuasan</h2>
+          <p>1. Bagaimana keramahan petugas kesehatan?</p>
+          <label><input type="radio" name="q1" required /> Sangat Baik</label>
+          <label><input type="radio" name="q1" /> Baik</label>
+          <label><input type="radio" name="q1" /> Cukup</label>
+          <label><input type="radio" name="q1" /> Kurang</label>
 
-                        <p>2. Bagaimana kecepatan pelayanan?</p>
-                            <label><input type="radio" name="q2" required> Sangat Cepat</label>
-                            <label><input type="radio" name="q2"> Cepat</label>
-                            <label><input type="radio" name="q2"> Cukup</label>
-                            <label><input type="radio" name="q2"> Lambat</label>
+          <p>2. Bagaimana kecepatan pelayanan?</p>
+          <label><input type="radio" name="q2" required /> Sangat Cepat</label>
+          <label><input type="radio" name="q2" /> Cepat</label>
+          <label><input type="radio" name="q2" /> Cukup</label>
+          <label><input type="radio" name="q2" /> Lambat</label>
 
-                        <p>3. Apakah fasilitas kesehatan memadai?</p>
-                            <label><input type="radio" name="q3" required> Sangat Memadai</label>
-                            <label><input type="radio" name="q3"> Memadai</label>
-                            <label><input type="radio" name="q3"> Cukup</label>
-                            <label><input type="radio" name="q3"> Kurang</label>
+          <p>3. Apakah fasilitas kesehatan memadai?</p>
+          <label
+            ><input type="radio" name="q3" required /> Sangat Memadai</label
+          >
+          <label><input type="radio" name="q3" /> Memadai</label>
+          <label><input type="radio" name="q3" /> Cukup</label>
+          <label><input type="radio" name="q3" /> Kurang</label>
 
-                        <p>4. Bagaimana kebersihan ruangan?</p>
-                            <label><input type="radio" name="q4" required> Sangat Bersih</label>
-                            <label><input type="radio" name="q4"> Bersih</label>
-                            <label><input type="radio" name="q4"> Cukup</label>
-                            <label><input type="radio" name="q4"> Kurang</label>
+          <p>4. Bagaimana kebersihan ruangan?</p>
+          <label><input type="radio" name="q4" required /> Sangat Bersih</label>
+          <label><input type="radio" name="q4" /> Bersih</label>
+          <label><input type="radio" name="q4" /> Cukup</label>
+          <label><input type="radio" name="q4" /> Kurang</label>
 
-                        <p>5. Bagaimana kenyamanan ruang tunggu?</p>
-                            <label><input type="radio" name="q5" required> Sangat Nyaman</label>
-                            <label><input type="radio" name="q5"> Nyaman</label>
-                            <label><input type="radio" name="q5"> Cukup</label>
-                            <label><input type="radio" name="q5"> Kurang</label>
+          <p>5. Bagaimana kenyamanan ruang tunggu?</p>
+          <label><input type="radio" name="q5" required /> Sangat Nyaman</label>
+          <label><input type="radio" name="q5" /> Nyaman</label>
+          <label><input type="radio" name="q5" /> Cukup</label>
+          <label><input type="radio" name="q5" /> Kurang</label>
 
-                        <p>6. Apakah informasi layanan mudah dipahami?</p>
-                            <label><input type="radio" name="q6" required> Sangat Mudah</label>
-                            <label><input type="radio" name="q6"> Mudah</label>
-                            <label><input type="radio" name="q6"> Cukup</label>
-                            <label><input type="radio" name="q6"> Sulit</label>
+          <p>6. Apakah informasi layanan mudah dipahami?</p>
+          <label><input type="radio" name="q6" required /> Sangat Mudah</label>
+          <label><input type="radio" name="q6" /> Mudah</label>
+          <label><input type="radio" name="q6" /> Cukup</label>
+          <label><input type="radio" name="q6" /> Sulit</label>
 
-                        <p>7. Bagaimana sikap dokter saat melayani?</p>
-                            <label><input type="radio" name="q7" required> Sangat Baik</label>
-                            <label><input type="radio" name="q7"> Baik</label>
-                            <label><input type="radio" name="q7"> Cukup</label>
-                            <label><input type="radio" name="q7"> Kurang</label>
+          <p>7. Bagaimana sikap dokter saat melayani?</p>
+          <label><input type="radio" name="q7" required /> Sangat Baik</label>
+          <label><input type="radio" name="q7" /> Baik</label>
+          <label><input type="radio" name="q7" /> Cukup</label>
+          <label><input type="radio" name="q7" /> Kurang</label>
 
-                        <p>8. Apakah prosedur pelayanan jelas?</p>
-                            <label><input type="radio" name="q8" required> Sangat Jelas</label>
-                            <label><input type="radio" name="q8"> Jelas</label>
-                            <label><input type="radio" name="q8"> Cukup</label>
-                            <label><input type="radio" name="q8"> Tidak Jelas</label>
+          <p>8. Apakah prosedur pelayanan jelas?</p>
+          <label><input type="radio" name="q8" required /> Sangat Jelas</label>
+          <label><input type="radio" name="q8" /> Jelas</label>
+          <label><input type="radio" name="q8" /> Cukup</label>
+          <label><input type="radio" name="q8" /> Tidak Jelas</label>
 
-                        <p>9. Bagaimana kualitas pelayanan secara keseluruhan?</p>
-                            <label><input type="radio" name="q9" required> Sangat Baik</label>
-                            <label><input type="radio" name="q9"> Baik</label>
-                            <label><input type="radio" name="q9"> Cukup</label>
-                            <label><input type="radio" name="q9"> Kurang</label>
+          <p>9. Bagaimana kualitas pelayanan secara keseluruhan?</p>
+          <label><input type="radio" name="q9" required /> Sangat Baik</label>
+          <label><input type="radio" name="q9" /> Baik</label>
+          <label><input type="radio" name="q9" /> Cukup</label>
+          <label><input type="radio" name="q9" /> Kurang</label>
 
-                        <p>10. Apakah Anda puas dengan pelayanan yang diberikan?</p>
-                            <label><input type="radio" name="q10" required> Sangat Puas</label>
-                            <label><input type="radio" name="q10"> Puas</label>
-                            <label><input type="radio" name="q10"> Cukup</label>
-                            <label><input type="radio" name="q10"> Tidak Puas</label>
+          <p>10. Apakah Anda puas dengan pelayanan yang diberikan?</p>
+          <label><input type="radio" name="q10" required /> Sangat Puas</label>
+          <label><input type="radio" name="q10" /> Puas</label>
+          <label><input type="radio" name="q10" /> Cukup</label>
+          <label><input type="radio" name="q10" /> Tidak Puas</label>
 
-                    <h3>Kritik dan Saran</h3>
-                        <textarea placeholder="Tuliskan kritik atau saran anda"></textarea>
-                        <button type="submit">Kirim Survei</button>
-                </div>
+          <h3>Kritik dan Saran</h3>
+          <textarea placeholder="Tuliskan kritik atau saran anda"></textarea>
+          <button type="submit">Kirim Survei</button>
+        </div>
+      </form>
 
-            </form>
+      <p id="pesan"></p>
+    </div>
 
-            <p id="pesan"></p>
+    <script src="javascripts/scripts.js"></script>
 
-            </div>
+    <footer>
 
-            <script src="javascripts/scripts.js"></script>
+<p>© 2026 Klinik Sehat Digital</p>
+<p>Melayani kesehatan masyarakat dengan teknologi</p>
 
-        </body>
-    </html>
+</footer>
+  </body>
+</html>

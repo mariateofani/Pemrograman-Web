@@ -1,19 +1,16 @@
-// mengambil elemen form
 const form = document.getElementById("surveyForm");
-
-// mengambil tempat untuk menampilkan pesan
 const pesan = document.getElementById("pesan");
 
-// event ketika tombol kirim ditekan
-form.addEventListener("submit", function(event){
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
 
-// mencegah halaman reload
-event.preventDefault();
+  pesan.innerHTML = "✅ Terima kasih! Survei Anda berhasil dikirim.";
 
-// menampilkan pesan berhasil
-pesan.innerHTML = "Terima kasih! Survei Anda berhasil dikirim.";
+  pesan.style.color = "green";
 
-// mengosongkan form kembali
-form.reset();
+  setTimeout(() => {
+    pesan.innerHTML = "";
+  }, 4000);
 
+  form.reset();
 });
