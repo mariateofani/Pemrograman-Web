@@ -6,6 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+
+const formRegister = document.querySelector("form");
+
+formRegister.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let email = document.getElementById("email").value;
+
+// simpan user
+localStorage.setItem("userLogin", email);
+
+alert("Registrasi berhasil");
+
+window.location.href = "index.html";
+
+});
+
+</script>
     
 </head>
 
