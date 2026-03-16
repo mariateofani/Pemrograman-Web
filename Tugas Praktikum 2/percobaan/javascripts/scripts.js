@@ -1,19 +1,4 @@
-const form = document.getElementById("surveyForm");
-const pesan = document.getElementById("pesan");
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  pesan.innerHTML = "✅ Terima kasih! Survei Anda berhasil dikirim.";
-
-  pesan.style.color = "green";
-
-  setTimeout(() => {
-    pesan.innerHTML = "";
-  }, 4000);
-
-  form.reset();
-});
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -24,7 +9,7 @@ form.addEventListener("submit", function(e){
 
 e.preventDefault();
 
-alert("Berhasil!");
+alert("✅ Terima kasih! Survei Anda berhasil dikirim.");
 
 window.location.href = "index.html";
 

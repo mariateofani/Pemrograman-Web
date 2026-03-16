@@ -1,128 +1,101 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family: 'Segoe UI', sans-serif;
-}
-
 body{
-background:linear-gradient(135deg,#e3f6fd,#f4fffa);
+font-family: Arial, sans-serif;
+background:linear-gradient(135deg, #ade9fc, #f0fcf3, #b8fadb, #9acdfc) ;
+margin:0;
 }
 
-/* HEADER */
+/* HEADER WEBSITE */
 header{
-background:linear-gradient(135deg,#3b82f6,#06b6d4);
+background: linear-gradient(135deg, #ccedf7, #3b86f7, #3b86f7, #9acdfc) ;
 color:white;
 display:flex;
 align-items:center;
-padding:18px 40px;
-box-shadow:0 6px 15px rgba(0,0,0,0.15);
+padding:15px;
+box-shadow:0 10px 20px rgba(20, 4, 247, 0.1);
 }
 
 header img{
 width:60px;
+padding: auto;
 margin-right:15px;
-border-radius:50%;
-background:white;
-padding:5px;
+margin-left: 30px;
+mix-blend-mode: multiply;
 }
 
-header h1{
-font-size:22px;
-font-weight:600;
-}
-
-/* CONTAINER */
+/* container utama */
 .container{
-max-width:800px;
-margin:40px auto;
-padding:20px;
+width:650px;
+margin:auto;
+margin-top:30px;
 }
 
-/* INTRO */
+/* intro text */
 .intro{
 background:white;
-padding:18px;
-border-radius:10px;
-margin-bottom:25px;
+padding:12px;
 text-align:center;
-box-shadow:0 3px 10px rgba(0,0,0,0.08);
+margin-bottom:20px;
+border-radius:8px;
 }
 
-/* CARD */
+/* card / kotak */
 .card{
 background:white;
 padding:30px;
-border-radius:12px;
-margin-bottom:25px;
-box-shadow:0 5px 18px rgba(0,0,0,0.1);
+margin-bottom:20px;
+border-radius:8px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
 
-.card h2{
-margin-bottom:15px;
-color:#2563eb;
-}
-
-.card h3{
-margin-top:20px;
-margin-bottom:10px;
-}
-
-/* INPUT */
+/* input */
 input, select, textarea{
 width:100%;
-padding:10px;
-border:1px solid #ddd;
-border-radius:6px;
-margin-bottom:12px;
-font-size:14px;
+padding:8px;
+margin-top:5px;
+margin-bottom:10px;
+border:1px solid #ccc;
+border-radius:5px;
 }
 
-/* RADIO GROUP */
-.radio-group{
-margin-bottom:15px;
+/* radio */
+input[type="radio"]{
+width:auto;
+margin-right:6px;
 }
 
-.radio-group label{
-display:flex;
-align-items:center;
-gap:8px;
+/* label */
+label{
+display:block;
 margin-bottom:5px;
-cursor:pointer;
 }
 
-/* TEXTAREA */
+/* textarea */
 textarea{
-height:90px;
-resize:none;
+height:80px;
 }
 
-/* BUTTON */
+/* tombol */
 button{
 width:100%;
-padding:14px;
-background:#2563eb;
+padding:12px;
+background:#3fbe74;
 color:white;
 border:none;
-border-radius:8px;
+border-radius:5px;
 font-size:16px;
-font-weight:600;
 cursor:pointer;
-transition:0.3s;
 }
 
 button:hover{
-background:#1e40af;
-transform:scale(1.02);
+background:#4093f1;
 }
 
-/* PESAN */
+/* pesan sukses */
 #pesan{
 text-align:center;
 margin-top:15px;
-font-weight:600;
+font-weight:bold;
 color:green;
-font-size:16px;
 }
 
 .btn-kembali{
