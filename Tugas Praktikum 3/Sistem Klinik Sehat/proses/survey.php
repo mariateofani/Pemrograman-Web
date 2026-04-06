@@ -16,8 +16,7 @@ $query = "INSERT INTO survey (nama, email, umur, jenis_kelamin, komentar)
 if (mysqli_query($conn, $query)) {
     echo "Data survey berhasil disimpan!";
     // redirect kalau mau:
-    // header("Location: dashboard.php");
-} else {
+ } else {
     echo "Error: " . mysqli_error($conn);
 }
 ?>
