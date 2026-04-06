@@ -37,7 +37,7 @@
 
             <p class="text-center mt-4">
                 Sudah punya akun?
-                <a href="login.html" class="text-blue-500">Login</a>
+                <a href="login.php" class="text-blue-500">Login</a>
             </p>
 
         </form>
