@@ -1,11 +1,15 @@
 <?php
-include 'koneksi.php';
+include '../server/koneksi.php';
 
 $username = $_POST['username'];
-$password = $_POST['password'];
+$password = md5($_POST['password']); // wajib sama dengan login
 
 $query = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
-mysqli_query($conn, $query);
+$result = mysqli_query($conn, $query);
 
-header("Location: login.php");
+if (!$result) {
+    die("Query error: " . mysqli_error($conn));
+}
+
+echo "Registrasi berhasil";
 ?>
