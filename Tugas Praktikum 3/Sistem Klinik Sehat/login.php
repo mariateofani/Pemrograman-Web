@@ -33,7 +33,7 @@
 
         <p class="text-center mt-4">
           Belum punya akun?
-          <a href="register.html" class="text-blue-500">Register</a>
+          <a href="register.php" class="text-blue-500">Register</a>
         </p>
       </form>
     </div>
