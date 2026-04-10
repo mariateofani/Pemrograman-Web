@@ -7,27 +7,21 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-cover bg-center" style="background-image: url('assets/bgindex1.png');">
 
-<!-- NAVBAR -->
-<nav class="bg-blue-600 text-white p-4 flex justify-between items-center">
-  <h1 class="font-bold">Klinik Sehat</h1>
+<div class="bg-black/50 min-h-screen">
 
-  <div class="flex gap-3">
-    <a href="login.php" class="text-sm">Login</a>
-    <a href="register.php" class="bg-white text-blue-600 px-3 py-1 rounded text-sm">
-      Daftar
-    </a>
-  </div>
+  <nav class="bg-blue-600 text-white p-4 flex justify-center items-center">
+  <h1 class="font-bold text-2xl">Klinik Sehat</h1>
 </nav>
 
 <!-- HERO -->
 <section class="p-6 text-center">
-  <h1 class="text-2xl font-bold text-blue-700 mb-3">
+  <h1 class="text-2xl font-bold text-white mb-3">
     Layanan Kesehatan Digital
   </h1>
 
-  <p class="text-gray-600 text-sm mb-5">
+  <p class="text-white text-sm mb-5">
     Daftar online, isi survey, dan nikmati pelayanan klinik dengan mudah.
   </p>
 
@@ -71,7 +65,8 @@
 
   </div>
 </section>
-
+  
+</div>
 </body>
 </html>
 

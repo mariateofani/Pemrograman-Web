@@ -1,16 +1,23 @@
 <?php
-include '../koneksi/db.php';
+include '../koneksi/db.php'; // sesuaikan dengan file koneksi kamu
 
 $nama = $_POST['nama'];
 $tgl_lahir = $_POST['tgl_lahir'];
 $jk = $_POST['jk'];
 $email = $_POST['email'];
-$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+$password = $_POST['password'];
 
-mysqli_query($conn, "INSERT INTO users 
+// simpan ke database
+$query = mysqli_query($conn, "INSERT INTO users 
 (nama, tgl_lahir, jk, email, password) 
 VALUES 
 ('$nama','$tgl_lahir','$jk','$email','$password')");
 
-header("Location: ../login.php");
+// cek berhasil
+if ($query) {
+    header("Location: ../login.php");
+    exit;
+} else {
+    echo "Gagal daftar!";
+}
 ?>
