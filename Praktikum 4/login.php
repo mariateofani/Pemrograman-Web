@@ -1,5 +1,4 @@
-<?php include 'includes/header.php'; ?>
-<?php include 'includes/footer.php'; ?>
+
 
 <!doctype html>
 <html lang="en">
@@ -42,3 +41,5 @@
     </div>
   </body>
 </html>
+
+<?php include 'includes/footer.php'; ?>
