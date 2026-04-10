@@ -1,6 +1,3 @@
-<?php include 'includes/header.php'; ?>
-<?php include 'includes/footer.php'; ?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -75,10 +72,7 @@
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="bg-blue-600 text-white text-center py-3 text-sm">
-  © 2026 Klinik Sehat
-</footer>
-
 </body>
 </html>
+
+<?php include 'includes/footer.php'; ?>
