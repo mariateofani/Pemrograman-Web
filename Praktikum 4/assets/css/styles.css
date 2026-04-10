@@ -1,127 +1,136 @@
-/* LANDING PAGE */
-.landing {
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+body{
+font-family: Arial, sans-serif;
+background:linear-gradient(135deg, #ade9fc, #f0fcf3, #b8fadb, #9acdfc) ;
+margin:0;
 }
 
-/* HERO */
-.hero h1 {
-    font-size: 32px;
-    color: #2c7be5;
+/* HEADER WEBSITE */
+header{
+background: linear-gradient(135deg, #ccedf7, #3b86f7, #3b86f7, #9acdfc) ;
+color:white;
+display:flex;
+align-items:center;
+padding:15px;
+box-shadow:0 10px 20px rgba(20, 4, 247, 0.1);
 }
 
-.hero p {
-    margin-top: 10px;
-    color: #555;
-    max-width: 500px;
+header img{
+width:60px;
+padding: auto;
+margin-right:15px;
+margin-left: 30px;
+mix-blend-mode: multiply;
 }
 
-/* BUTTON GROUP */
-.btn-group {
-    margin-top: 25px;
+/* container utama */
+.container{
+width:650px;
+margin:auto;
+margin-top:30px;
 }
 
-/* BUTTON STYLE */
-.btn {
-    text-decoration: none;
-    padding: 12px 25px;
-    margin: 5px;
-    border-radius: 8px;
-    font-weight: bold;
-    display: inline-block;
+/* intro text */
+.intro{
+background:white;
+padding:12px;
+text-align:center;
+margin-bottom:20px;
+border-radius:8px;
 }
 
-/* PRIMARY BUTTON */
-.btn.primary {
-    background: #2c7be5;
-    color: white;
+/* card / kotak */
+.card{
+background:white;
+padding:30px;
+margin-bottom:20px;
+border-radius:8px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* SECONDARY BUTTON */
-.btn.secondary {
-    background: white;
-    color: #2c7be5;
-    border: 2px solid #2c7be5;
+/* input */
+input, select, textarea{
+width:100%;
+padding:8px;
+margin-top:5px;
+margin-bottom:10px;
+border:1px solid #ccc;
+border-radius:5px;
 }
 
-/* HOVER EFFECT */
-.btn.primary:hover {
-    background: #1a5fd0;
+/* radio */
+input[type="radio"]{
+width:auto;
+margin-right:6px;
 }
 
-.btn.secondary:hover {
-    background: #2c7be5;
-    color: white;
+/* label */
+label{
+display:block;
+margin-bottom:5px;
 }
 
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #f4f6f9;
-    margin: 0;
+/* textarea */
+textarea{
+height:80px;
 }
 
-/* NAVBAR */
-nav {
-    background: #2c7be5;
-    color: white;
-    padding: 15px;
-    text-align: center;
+/* tombol */
+button{
+width:100%;
+padding:12px;
+background:#3fbe74;
+color:white;
+border:none;
+border-radius:5px;
+font-size:16px;
+cursor:pointer;
 }
 
-/* CONTAINER */
-.container {
-    width: 100%;
-    max-width: 400px;
-    margin: 50px auto;
+button:hover{
+background:#4093f1;
 }
 
-/* CARD */
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+/* pesan sukses */
+#pesan{
+text-align:center;
+margin-top:15px;
+font-weight:bold;
+color:green;
 }
 
-/* FORM */
-form {
-    display: flex;
-    flex-direction: column;
+.btn-kembali{
+display:inline-block;
+margin-bottom:20px;
+padding:10px 16px;
+background:#2563eb;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-size:14px;
+transition:0.3s;
 }
 
-label {
-    margin-top: 10px;
-    font-weight: 500;
+.btn-kembali:hover{
+background:#1e40af;
+transform:translateY(-2px);
 }
 
-input, select {
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+footer{
+background: linear-gradient(135deg,#2563eb,#0ea5e9);
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+font-family:Segoe UI, sans-serif;
+box-shadow:0 -4px 10px rgba(0,0,0,0.1);
 }
 
-/* BUTTON */
-button {
-    margin-top: 20px;
-    padding: 12px;
-    background: #2c7be5;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
+footer p{
+margin:5px 0;
+font-size:14px;
 }
 
-button:hover {
-    background: #1a5fd0;
-}
-
-/* LINK */
-.link {
-    margin-top: 15px;
-    text-align: center;
+footer p:first-child{
+font-weight:600;
+font-size:15px;
 }

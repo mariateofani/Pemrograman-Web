@@ -1,22 +1,200 @@
 <?php 
+session_start();
+
+if (!isset($_SESSION['user'])) {
+  header("Location: login.php");
+  exit;
+}
+
 include 'includes/auth.php';
 include 'includes/header.php'; 
 ?>
 
-<div class="container">
-    <h2>Dashboard</h2>
+<!doctype html>
 
-    <p>Selamat datang, <b><?= $_SESSION['user']['nama']; ?></b></p>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klinik Kesehatan Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
 
-    <div class="menu">
-        <a href="services/survey.php">Isi Survey</a>
+  <body class="bg-gray-100">
+    <!-- NAVBAR -->
 
-        <?php if ($_SESSION['user']['role'] == 'admin') { ?>
-            <a href="admin.php">Data Survey</a>
-        <?php } ?>
+    <nav class="bg-blue-600 text-white shadow-md">
+      <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+        <div class="flex items-center gap-2">
+          <img src="https://down-id.img.susercontent.com/file/8bac08e36a5b3c2a943b8d356bf1bbbd@resize_w450_nl.webp"
+          class="w-[40px] ml-[10px] mr-[5px] bg-white p-1 rounded">
+          <h1 class="font-bold text-lg">Klinik Kesehatan Digital</h1>
+        </div>
 
-        <a href="proces/logout.php">Logout</a>
-    </div>
-</div>
+        <ul class="flex gap-6">
+          <li><a href="index.php" class="hover:text-blue-200">Home</a></li>
+          <li><a href="#layanan" class="hover:text-blue-200">Layanan</a></li>
+          <li><a href="#fitur" class="hover:text-blue-200">Fitur</a></li>
+          <li>
+            <a href="profile.php" class="hover:text-blue-200">Profile</a>
+          </li>
+          <li>
+            <a href="logout.php" class="hover:text-blue-200">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="bg-sky-100 py-20">
+      <div
+        class="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-10 px-6"
+      >
+        <div>
+          <h1 class="text-4xl font-bold text-blue-700 mb-6">Selamat Datang, <?php echo $_SESSION['user']; ?> 👋
+          </h1>
+
+          <p class="text-gray-600 mb-6">
+            Klinik Sehat menyediakan layanan kesehatan modern dengan sistem
+            digital untuk mempermudah pasien mendapatkan pelayanan secara cepat
+            dan realtime.
+          </p>
+
+          <div class="flex gap-4">
+            <a
+              href="register.php"
+              class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700"
+            >
+              Daftar Sekarang
+            </a>
+
+            <a
+              href="services/survey.php"
+              class="bg-green-500 text-white px-6 py-3 rounded-lg shadow hover:bg-green-700"
+            >
+              Isi Survey
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="https://img.freepik.com/free-vector/doctor-character-background_1270-84.jpg"
+            class="w-72 md:w-80 rounded-lg shadow-lg mx-auto"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- INFORMASI -->
+
+    <section class="max-w-6xl mx-auto py-16 px-6">
+      <h2 class="text-2xl font-bold text-center mb-4">Informasi Klinik</h2>
+
+      <p class="text-center text-gray-600 max-w-3xl mx-auto">
+        Klinik Sehat memberikan pelayanan kesehatan umum, pemeriksaan rutin,
+        konsultasi dokter, serta berbagai layanan kesehatan lainnya untuk
+        masyarakat. Kami berkomitmen memberikan pelayanan yang ramah, cepat, dan
+        profesional.
+      </p>
+    </section>
+
+    <!-- LAYANAN -->
+
+    <section id="layanan" class="max-w-6xl mx-auto pb-16 px-6">
+      <h2 class="text-2xl font-bold text-center mb-10">Layanan Klinik</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div
+          class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition"
+        >
+          <img
+            src="https://i.pinimg.com/736x/20/95/a7/2095a72f390f72074776019b7004d776.jpg"
+            class="rounded mb-4"
+          />
+
+          <h3 class="font-bold text-lg mb-2">Pemeriksaan Umum</h3>
+          <p class="text-gray-600">
+            Pemeriksaan kesehatan oleh tenaga medis profesional.
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition"
+        >
+          <img
+            src="https://i.pinimg.com/736x/bc/cb/37/bccb37b604d37d26e1f506522af1b4ad.jpg"
+            class="rounded mb-4"
+          />
+
+          <h3 class="font-bold text-lg mb-2">Konsultasi Dokter</h3>
+          <p class="text-gray-600">
+            Konsultasi dengan dokter untuk berbagai masalah kesehatan.
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition"
+        >
+          <img
+            src="https://i.pinimg.com/736x/6e/b1/1a/6eb11a8180352442c3ee0d168d765608.jpg"
+            class="rounded mb-4"
+          />
+
+          <h3 class="font-bold text-lg mb-2">Pelayanan Gigi</h3>
+          <p class="text-gray-600">
+            Perawatan kesehatan gigi oleh dokter gigi profesional.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FITUR -->
+
+    <section id="fitur" class="bg-blue-50 py-16">
+      <div class="max-w-6xl mx-auto text-center px-6">
+        <h2 class="text-2xl font-bold mb-10">Fitur Klinik Sehat Digital</h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="font-bold mb-2">Pendaftaran Online</h3>
+            <p class="text-gray-600 text-sm">
+              Pasien dapat mendaftar tanpa harus datang ke klinik.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="font-bold mb-2">Informasi Realtime</h3>
+            <p class="text-gray-600 text-sm">
+              Pasien dapat melihat informasi layanan secara realtime.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="font-bold mb-2">Profil Pasien</h3>
+            <p class="text-gray-600 text-sm">
+              Data pasien tersimpan secara digital.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="font-bold mb-2">Pelayanan Cepat</h3>
+            <p class="text-gray-600 text-sm">
+              Sistem pelayanan lebih cepat dan efisien.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="bg-blue-600 text-white text-center p-5">
+      <p>© 2026 Klinik Sehat Digital</p>
+      <p>Melayani kesehatan masyarakat dengan teknologi</p>
+    </footer>
+  </body>
+</html>
 
 <?php include 'includes/footer.php'; ?>

@@ -1,0 +1,127 @@
+/* LANDING PAGE */
+.landing {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* HERO */
+.hero h1 {
+    font-size: 32px;
+    color: #2c7be5;
+}
+
+.hero p {
+    margin-top: 10px;
+    color: #555;
+    max-width: 500px;
+}
+
+/* BUTTON GROUP */
+.btn-group {
+    margin-top: 25px;
+}
+
+/* BUTTON STYLE */
+.btn {
+    text-decoration: none;
+    padding: 12px 25px;
+    margin: 5px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* PRIMARY BUTTON */
+.btn.primary {
+    background: #2c7be5;
+    color: white;
+}
+
+/* SECONDARY BUTTON */
+.btn.secondary {
+    background: white;
+    color: #2c7be5;
+    border: 2px solid #2c7be5;
+}
+
+/* HOVER EFFECT */
+.btn.primary:hover {
+    background: #1a5fd0;
+}
+
+.btn.secondary:hover {
+    background: #2c7be5;
+    color: white;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+}
+
+/* NAVBAR */
+nav {
+    background: #2c7be5;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+input, select {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* BUTTON */
+button {
+    margin-top: 20px;
+    padding: 12px;
+    background: #2c7be5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #1a5fd0;
+}
+
+/* LINK */
+.link {
+    margin-top: 15px;
+    text-align: center;
+}
