@@ -7,10 +7,16 @@ $jk = $_POST['jk'];
 $email = $_POST['email'];
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-mysqli_query($conn, "INSERT INTO users 
+// CEK QUERY BERHASIL ATAU TIDAK
+$query = mysqli_query($conn, "INSERT INTO users 
 (nama, tgl_lahir, jk, email, password) 
 VALUES 
 ('$nama','$tgl_lahir','$jk','$email','$password')");
 
-header("Location: ../login.php");
+if ($query) {
+    header("Location: ../login.php");
+    exit;
+} else {
+    echo "Register gagal: " . mysqli_error($conn);
+}
 ?>
