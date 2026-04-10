@@ -20,6 +20,7 @@ $data = mysqli_query($conn, "SELECT * FROM users");
 <body class="bg-gray-100 p-6">
 
 <h1 class="text-2xl font-bold mb-4">Dashboard Admin</h1>
+<p>Halo Admin: <?php echo $_SESSION['email']; ?></p>
 
 <a href="tambah_data.php" class="bg-green-600 text-white px-3 py-2 rounded">
 Tambah Data
