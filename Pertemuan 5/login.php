@@ -1,47 +1,37 @@
-
-
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
 
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-<form action="proces/loginproses.php" method="POST">
-<div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-      <h2 class="text-2xl font-bold text-center mb-6">Login</h2>
+<div class="bg-white p-6 rounded-lg shadow w-full max-w-sm">
 
-      <form>
-        <input
-          id="email"
-          type="email"
-          placeholder="Email"
-          required
-          class="w-full border rounded-lg px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
+<h2 class="text-xl font-bold text-center mb-4">Login</h2>
 
-        <input
-          type="password"
-          placeholder="Password"
-          required
-          class="w-full border rounded-lg px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
+<form action="proses/prosesLogin.php" method="POST">
 
-        <button type="submit" class="bg-blue-600 text-white p-2 w-full der rounded-lg px-3 py-2">
-          Login
-        </button>
+<input type="email" name="email" placeholder="Email"
+class="w-full border p-2 mb-3 rounded" required>
 
-        <p class="text-center mt-4">
-          Belum punya akun?
-          <a href="register.php" class="text-blue-500">Register</a>
-        </p>
-      </form>
-    </div>
+<input type="password" name="password" placeholder="Password"
+class="w-full border p-2 mb-3 rounded" required>
+
+<button class="bg-blue-600 text-white w-full py-2 rounded">
+Login
+</button>
+
 </form>
+
+<p class="text-center mt-3">
+Belum punya akun?
+<a href="register.php" class="text-blue-500">Register</a>
+</p>
+
+</div>
+
 </body>
 </html>
-

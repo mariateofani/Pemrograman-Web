@@ -18,13 +18,16 @@
 <!-- HERO -->
 <section class="p-6 text-center">
   <h1 class="text-2xl font-bold text-white mb-3">
-    Layanan Kesehatan Digital
+    Selamat Datang di Layanan Kesehatan Digital
   </h1>
 
   <p class="text-white text-sm mb-5">
     Daftar online, isi survey, dan nikmati pelayanan klinik dengan mudah.
   </p>
-
+<div>
+  <img src="https://img.freepik.com/free-vector/doctor-character-background_1270-84.jpg"
+            class="w-72 md:w-80 mb-5 rounded-lg shadow-lg mx-auto"/>
+</div>
   <a href="register.php"
      class="block bg-blue-600 text-white py-3 rounded-lg mb-3">
     Daftar Sekarang

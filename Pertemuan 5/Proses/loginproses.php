@@ -1,17 +1,20 @@
 <?php
 session_start();
-include '../koneksi/db.php';
+include '../services/koneksi.php';
 
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-$query = mysqli_query($conn, "SELECT * FROM users WHERE email='$email'");
-$data = mysqli_fetch_assoc($query);
+$data = mysqli_query($conn, "SELECT * FROM users 
+WHERE email='$email' AND password='$password'");
 
-if ($data && password_verify($password, $data['password'])) {
-    $_SESSION['user'] = $data;
+$cek = mysqli_num_rows($data);
+
+if ($cek > 0) {
+    $_SESSION['email'] = $email;
     header("Location: ../dashboard.php");
+    exit;
 } else {
-    echo "Login gagal!";
+    echo "Login gagal";
 }
 ?>

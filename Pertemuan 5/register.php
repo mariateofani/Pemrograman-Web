@@ -1,82 +1,40 @@
-
-
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<title>Register</title>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-  <div class="w-full max-w-sm bg-white p-6 rounded-xl shadow">
+<div class="bg-white p-6 rounded-lg shadow w-full max-w-sm">
 
-    <h2 class="text-center text-xl font-bold mb-5">Register</h2>
+<h2 class="text-xl font-bold text-center mb-4">Register</h2>
 
-    <form action="proces/registerproses.php" method="POST" class="space-y-4">
+<form action="proses/prosesRegister.php" method="POST">
 
-      <!-- Nama -->
-      <div>
-        <label class="block text-sm mb-1">Nama Lengkap</label>
-        <input type="text" name="nama"
-          class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          placeholder="Masukkan nama" required>
-      </div>
+<input type="text" name="nama" placeholder="Nama"
+class="w-full border p-2 mb-3 rounded" required>
 
-      <!-- Tanggal Lahir -->
-      <div>
-        <label class="block text-sm mb-1">Tanggal Lahir</label>
-        <input type="date" name="tgl_lahir"
-          class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          required>
-      </div>
+<input type="email" name="email" placeholder="Email"
+class="w-full border p-2 mb-3 rounded" required>
 
-      <!-- Jenis Kelamin -->
-      <div>
-        <label class="block text-sm mb-1">Jenis Kelamin</label>
-        <select name="jk"
-          class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          required>
-          <option value="">-- Pilih --</option>
-          <option value="L">Laki-laki</option>
-          <option value="P">Perempuan</option>
-        </select>
-      </div>
+<input type="password" name="password" placeholder="Password"
+class="w-full border p-2 mb-3 rounded" required>
 
-      <!-- Email -->
-      <div>
-        <label class="block text-sm mb-1">Email</label>
-        <input type="email" name="email"
-          class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          placeholder="Masukkan email" required>
-      </div>
+<button class="bg-blue-600 text-white w-full py-2 rounded">
+Daftar
+</button>
 
-      <!-- Password -->
-      <div>
-        <label class="block text-sm mb-1">Password</label>
-        <input type="password" name="password"
-          class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          placeholder="Masukkan password" required>
-      </div>
+</form>
 
-      <!-- Button -->
-      <button type="submit"
-        class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
-        Daftar
-      </button>
+<p class="text-center mt-3">
+Sudah punya akun?
+<a href="login.php" class="text-blue-500">Login</a>
+</p>
 
-    </form>
-
-    <!-- Link Login -->
-    <p class="text-center text-sm mt-4">
-      Sudah punya akun?
-      <a href="login.php" class="text-blue-600 font-semibold">Login</a>
-    </p>
-
-  </div>
+</div>
 
 </body>
 </html>
-
