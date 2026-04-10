@@ -1,24 +1,44 @@
 <?php include 'includes/header.php'; ?>
-
-<div class="container">
-    <div class="card">
-        <h2 style="text-align:center;">Login</h2>
-
-        <form action="proces/loginproses.php" method="POST">
-            
-            <label>Email</label>
-            <input type="email" name="email" placeholder="Masukkan email" required>
-
-            <label>Password</label>
-            <input type="password" name="password" placeholder="Masukkan password" required>
-
-            <button type="submit">Login</button>
-        </form>
-
-        <div class="link">
-            Belum punya akun? <a href="register.php">Daftar</a>
-        </div>
-    </div>
-</div>
-
 <?php include 'includes/footer.php'; ?>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-white min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+      <h2 class="text-2xl font-bold text-center mb-6">Login</h2>
+
+      <form>
+        <input
+          id="email"
+          type="email"
+          placeholder="Email"
+          required
+          class="border p-2 w-full mb-3"
+        />
+
+        <input
+          type="password"
+          placeholder="Password"
+          required
+          class="border p-2 w-full mb-3"
+        />
+
+        <button type="submit" class="bg-blue-600 text-white p-2 w-full">
+          Login
+        </button>
+
+        <p class="text-center mt-4">
+          Belum punya akun?
+          <a href="register.php" class="text-blue-500">Register</a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
