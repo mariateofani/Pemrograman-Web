@@ -7,7 +7,7 @@
 
 <body class="bg-blue-50 flex items-center justify-center min-h-screen">
 
-<div class="text-center">
+<div class="text-center bg-white/90 backdrop-blur-lg shadow-2xl rounded-2xl p-8 w-full max-w-md">
   <h1 class="text-4xl font-bold text-blue-700 mb-4">
     Klinik Sehat
   </h1>
@@ -16,12 +16,19 @@
     Sistem Layanan Kesehatan Digital
   </p>
 
-  <a href="login.php" class="bg-blue-600 text-white px-6 py-2 rounded mr-2">
+  <div>
+          <img
+            src="https://img.freepik.com/free-vector/doctor-character-background_1270-84.jpg"
+            class="w-72 md:w-80 rounded-lg shadow-2xl mx-auto"
+          />
+        </div>
+
+  <a href="login.php" class="bg-blue-600 text-white px-6 py-2 rounded mr-2 shadow-xl">
     Login
   </a>
 
-  <a href="register.php" class="bg-gray-300 px-6 py-2 rounded">
-    Register
+  <a href="register.php" class="bg-gray-300 px-6 py-2 rounded shadow-xl">
+    Daftar
   </a>
 </div>
 
