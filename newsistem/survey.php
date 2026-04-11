@@ -107,6 +107,6 @@
   </form>
 </form>
 </div>
-
+<script src="javascripts/scripts.js"></script>
 </body>
 </html>
