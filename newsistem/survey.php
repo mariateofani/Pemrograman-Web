@@ -12,7 +12,7 @@
 
 <body class="bg-gray-100">
 
-<form action="prosesSurvey.php" method="POST">
+<form action="process/prosesSurvey.php" method="POST">
 <div class="max-w-5xl mx-auto p-6">
 
   <!-- HEADER -->

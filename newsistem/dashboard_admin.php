@@ -7,11 +7,33 @@ if (!isset($_SESSION['email']) || $_SESSION['role'] != 'admin') {
     exit;
 }
 
-// data survey
-$data = mysqli_query($koneksi, "SELECT * FROM survey");
+/* SEARCH (biar tidak error) */
+$search = isset($_GET['search']) ? $_GET['search'] : "";
+$role   = isset($_GET['role']) ? $_GET['role'] : "";
+/* DATA USER */
+if ($search != "" || $role != "") {
 
-// data user
-$user = mysqli_query($koneksi, "SELECT * FROM users");
+    $query = "
+        SELECT * FROM users 
+        WHERE 1=1
+    ";
+
+    if ($search != "") {
+        $query .= " AND (nama LIKE '%$search%' OR email LIKE '%$search%')";
+    }
+
+    if ($role != "") {
+        $query .= " AND role='$role'";
+    }
+
+    $user = mysqli_query($koneksi, $query);
+
+} else {
+    $user = mysqli_query($koneksi, "SELECT * FROM users");
+}
+
+/* DATA SURVEY */
+$data = mysqli_query($koneksi, "SELECT * FROM survey");
 ?>
 
 <!doctype html>
@@ -78,12 +100,21 @@ $user = mysqli_query($koneksi, "SELECT * FROM users");
 <!-- KELOLA USER -->
 <!-- ===================== -->
 <section id="user" class="max-w-6xl mx-auto mt-10">
-<form method="GET" class="mb-4">
+<form method="GET" class="mb-4 flex gap-2">
+
   <input type="text" name="search" placeholder="Cari nama/email..."
     class="border p-2 rounded w-64">
+
+  <select name="role" class="border p-2 rounded">
+    <option value="">Semua Role</option>
+    <option value="admin">Admin</option>
+    <option value="user">User</option>
+  </select>
+
   <button class="bg-blue-500 text-white px-4 py-2 rounded">
-    Cari
+    Filter
   </button>
+
 </form>
   <div class="bg-white p-6 rounded shadow">
     <h2 class="text-xl font-bold mb-4">Kelola User</h2>
