@@ -90,6 +90,7 @@ $user = mysqli_query($koneksi, "SELECT * FROM users");
 
     <table class="w-full border">
       <tr class="bg-gray-200">
+        <th class="p-2">ID</th>
         <th class="p-2">Nama</th>
         <th class="p-2">Email</th>
         <th class="p-2">Role</th>
@@ -98,20 +99,28 @@ $user = mysqli_query($koneksi, "SELECT * FROM users");
 
       <?php while($u = mysqli_fetch_assoc($user)) { ?>
       <tr class="border-t">
-        <td class="p-2"><?= $u['nama'] ?></td>
-        <td class="p-2"><?= $u['email'] ?></td>
-        <td class="p-2"><?= $u['role'] ?></td>
+        <td class="p-2"><?php echo $u['id_user'] ?? $u['id_user'] ?></td>
+        <td class="p-2"><?php echo $u['nama'] ?></td>
+        <td class="p-2"><?php echo $u['email'] ?></td>
+        <td class="p-2"><?php echo $u['role'] ?></td>
         <td class="p-2">
-          <a href="editusers.php?id=<?= $u['id'] ?>" class="text-blue-500">
-            Edit
+
+          <!-- EDIT -->
+          <a href="editusers.php?id=<?= $u['id_user'] ?? $u['id'] ?>" 
+             class="text-blue-500">
+             Edit
           </a>
 
-          <a href="hapususers.php?id=<?= $u['id'] ?>" 
+          <!-- HAPUS -->
+          <a href="proses/prosesHapus.php?id=<?= $u['id_user'] ?? $u['id'] ?>" 
              class="text-red-500 ml-2"
              onclick="return confirm('Yakin ingin hapus user ini?')">
              Hapus
           </a>
-      </tr><?php } ?>
+
+        </td>
+      </tr>
+<?php } ?>
     </table>
   </div>
 </section>
@@ -127,36 +136,30 @@ $user = mysqli_query($koneksi, "SELECT * FROM users");
     <table class="w-full border">
       <tr class="bg-gray-200">
         <th class="p-2">Nama</th>
-        <th class="p-2">HP</th>
+        <th class="p-2">Tanggal lahir</th>
         <th class="p-2">JK</th>
+        <th class="p-2">HP</th>
         <th class="p-2">Total Skor</th>
-        <th class="p-2">Aksi</th>
       </tr>
 
-      <?php while($u = mysqli_fetch_assoc($user)) { ?>
-<tr class="border-t">
-
-  <td class="p-2"><?php echo $u['nama']; ?></td>
-  <td class="p-2"><?php echo $u['email']; ?></td>
-  <td class="p-2"><?php echo $u['role']; ?></td>
-
-  <td class="p-2">
-
-    <a href="editusers.php?id=<?php echo $u['id']; ?>" 
-       class="text-blue-500">
-       Edit
-    </a>
-
-    <a href="hapususers.php?id=<?php echo $u['id']; ?>" 
-       class="text-red-500 ml-2"
-       onclick="return confirm('Yakin ingin hapus user ini?')">
-       Hapus
-    </a>
-
-  </td>
-
-</tr>
+    <?php if (mysqli_num_rows($data) > 0) { ?>
+        <?php while($d = mysqli_fetch_assoc($data)) { ?>
+        <tr class="border-t">
+          <td class="p-2"><?= $d['nama'] ?></td>
+          <td class="p-2"><?= $d['tgl_lahir'] ?></td>
+          <td class="p-2"><?= $d['jk'] ?></td>
+          <td class="p-2"><?= $d['hp'] ?></td>
+          <td class="p-2"><?= $d['total_skor'] ?></td>
+        </tr>
+        <?php } ?>
+    <?php } else { ?>
+    <tr>
+        <td colspan="5" class="text-center p-4 text-gray-500">
+            Tidak ada data survey
+        </td>
+    </tr>
 <?php } ?>
+      
     </table>
   </div>
 </section>
