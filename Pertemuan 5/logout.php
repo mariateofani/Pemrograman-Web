@@ -1,2 +1,2 @@
 <?php
-header("Location: proses/prosesLogout.php");
+header("Location: process/prosesLogout.php");

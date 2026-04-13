@@ -5,7 +5,7 @@ include '../includes/header.php';
 
 <h2>Form Survey</h2>
 
-<form action="../proces/surveyproses.php" method="POST">
+<form action="../process/surveyproses.php" method="POST">
     <label>Pelayanan:</label>
     <input type="number" name="pelayanan" min="1" max="5" required>
 

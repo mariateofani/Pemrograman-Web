@@ -30,7 +30,7 @@
   </div>
 
   <!-- FORM -->
-  <form action="proses/prosesSurvey.php" method="POST"
+  <form action="process/prosesSurvey.php" method="POST"
         class="bg-white p-6 rounded-xl shadow space-y-6">
 
     <!-- DATA PASIEN -->

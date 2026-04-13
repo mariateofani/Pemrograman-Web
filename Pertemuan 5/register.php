@@ -12,7 +12,7 @@
 
 <h2 class="text-xl font-bold text-center mb-4">Register</h2>
 
-<form action="proses/prosesRegister.php" method="POST">
+<form action="process/prosesRegister.php" method="POST">
 
 <input type="text" name="nama" placeholder="Nama"
 class="w-full border p-2 mb-3 rounded" required>

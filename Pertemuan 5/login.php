@@ -12,7 +12,7 @@
 
 <h2 class="text-xl font-bold text-center mb-4">Login</h2>
 
-<form action="proses/prosesLogin.php" method="POST">
+<form action="process/prosesLogin.php" method="POST">
 
 <input type="email" name="email" placeholder="Email"
 class="w-full border p-2 mb-3 rounded" required>

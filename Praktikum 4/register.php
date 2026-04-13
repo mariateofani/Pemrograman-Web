@@ -14,7 +14,7 @@
     <h2 class="text-center text-xl font-bold mb-5">Register</h2>
 
     <!-- ✅ SUDAH DIPERBAIKI DI SINI -->
-    <form action="Proses/registerproses.php" method="POST" class="space-y-4">
+    <form action="process/registerproses.php" method="POST" class="space-y-4">
 
       <!-- Nama -->
       <div>

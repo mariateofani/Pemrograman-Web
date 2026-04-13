@@ -28,7 +28,7 @@ session_start();
         <?php unset($_SESSION['error']); } ?>
 
         <!-- Form -->
-        <form action="proses/prosesRegister.php" method="POST" onsubmit="return validateForm()">
+        <form action="process/prosesRegister.php" method="POST" onsubmit="return validateForm()">
             
             <!-- Nama -->
             <div class="mb-4">

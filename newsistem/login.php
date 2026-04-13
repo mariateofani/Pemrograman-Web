@@ -33,7 +33,7 @@
         <?php unset($_SESSION['error']); } ?>
 
         <!-- Form -->
-        <form action="proses/prosesLogin.php" method="POST" onsubmit="return validateForm()">
+        <form action="process/prosesLogin.php" method="POST" onsubmit="return validateForm()">
 
             <!-- Email -->
             <div class="mb-4">
