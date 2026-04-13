@@ -1,6 +1,4 @@
 <script>
-    
-</script>
 document.addEventListener("DOMContentLoaded", function(){
     const form = document.querySelector("form");
 
@@ -11,8 +9,9 @@ document.addEventListener("DOMContentLoaded", function(){
             alert("✅ Terima kasih! Survei Anda berhasil dikirim.");
 
             setTimeout(() => {
-                window.location.href = "index.php";
+                window.location.href = "dashboard.php";
             }, 300);
         });
     }
 });
+</script>
