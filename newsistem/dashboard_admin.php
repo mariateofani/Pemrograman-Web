@@ -78,7 +78,13 @@ $user = mysqli_query($koneksi, "SELECT * FROM users");
 <!-- KELOLA USER -->
 <!-- ===================== -->
 <section id="user" class="max-w-6xl mx-auto mt-10">
-
+<form method="GET" class="mb-4">
+  <input type="text" name="search" placeholder="Cari nama/email..."
+    class="border p-2 rounded w-64">
+  <button class="bg-blue-500 text-white px-4 py-2 rounded">
+    Cari
+  </button>
+</form>
   <div class="bg-white p-6 rounded shadow">
     <h2 class="text-xl font-bold mb-4">Kelola User</h2>
 

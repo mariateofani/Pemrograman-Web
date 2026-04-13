@@ -19,12 +19,12 @@
   <div class="bg-white p-6 rounded-xl shadow text-center mb-6">
 
     <h1 class="text-2xl font-bold">Survei Kepuasan Pasien</h1>
-    <p class="text-gray-600">
+    <p class="mb-5 text-gray-600">
       Silakan isi data dan jawaban dengan jujur
     </p>
 
     <a href="dashboard.php"
-       class="container-button inline-block mt-3 text-blue-600 hover:underline">
+       class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-700 transition">
       ← Kembali ke Dashboard
     </a>
   </div>
@@ -107,6 +107,6 @@
   </form>
 </form>
 </div>
-<script src="javascripts/scripts.js"></script>
+<script src="assets/js/scriptsurvey.js"></script>
 </body>
 </html>

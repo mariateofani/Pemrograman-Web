@@ -99,20 +99,6 @@ session_start();
     </div>
 
     <!-- JS -->
-    <script src="assets/js/script.js"></script>
-
-    <!-- Optional JS kalau belum ada file -->
-    <script>
-        function togglePassword() {
-            const password = document.getElementById("password");
-
-            if (password.type === "password") {
-                password.type = "text";
-            } else {
-                password.type = "password";
-            }
-        }
-    </script>
-
+    <script src="assets/js/scriptregister.js"></script>
 </body>
 </html>

@@ -47,5 +47,5 @@ $query = "INSERT INTO survey (
 mysqli_query($koneksi, $query);
 
 // kembali ke dashboard user
-header("Location: ../dashboard_user.php");
+header("Location: ../dashboard.php");
 exit;
