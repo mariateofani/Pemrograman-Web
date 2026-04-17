@@ -44,6 +44,12 @@ $query = "INSERT INTO survey (
     '$total_skor'
 )";
 
+if ($query) {
+    header("Location: ../survey.php?status=berhasil");
+} else {
+    header("Location: ../survey.php?status=gagal");
+}
+
 mysqli_query($koneksi, $query);
 
 // kembali ke dashboard user
