@@ -23,7 +23,7 @@ $data = mysqli_fetch_assoc(
         Edit User
     </h2>
 
-    <form action="proses/prosesEdit.php" method="POST" class="space-y-4">
+    <form action="process/prosesEdit.php" method="POST" class="space-y-4">
 
         <input type="hidden" name="id" value="<?= $data['id_user'] ?>">
 
