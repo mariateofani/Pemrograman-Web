@@ -129,7 +129,7 @@
       <p id="pesan"></p>
     </div>
 
-    <script src="javascripts/scriptsSurvey.js"></script>
+    <script src="javascripts/scriptsSSurvey.js"></script>
 
     <footer>
 
