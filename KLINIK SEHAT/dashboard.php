@@ -1,11 +1,27 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['email']) || $_SESSION['role'] != 'user') {
+if (!isset($_SESSION['email']) || !isset($_SESSION['role'])) {
+    header("Location: login.php");
+    exit;
+}
+
+if ($_SESSION['role'] !== 'user') {
     header("Location: login.php");
     exit;
 }
 ?>
+<?php if (isset($_SESSION['success'])) { ?>
+    <div class="bg-green-500 text-white p-3 rounded-lg mb-4 text-center">
+        <?= $_SESSION['success']; ?>
+    </div>
+<?php unset($_SESSION['success']); } ?>
+
+<?php if (isset($_SESSION['error'])) { ?>
+    <div class="bg-red-500 text-white p-3 rounded-lg mb-4 text-center">
+        <?= $_SESSION['error']; ?>
+    </div>
+<?php unset($_SESSION['error']); } ?>
 
 <!DOCTYPE html>
 <html lang="id">

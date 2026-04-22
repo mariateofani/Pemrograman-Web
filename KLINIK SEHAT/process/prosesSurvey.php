@@ -44,17 +44,13 @@ $query = "INSERT INTO survey (
     '$total_skor'
 )";
 
+
+// setelah INSERT berhasil/gagal
 if (mysqli_query($koneksi, $query)) {
-    header("Location: ../survey.php?status=berhasil");
+    $_SESSION['success'] = "Survey berhasil dikirim!";
 } else {
-    header("Location: ../survey.php?status=gagal");
-}
-exit;
-if (!$nama || !$q1) {
-    header("Location: ../survey.php?status=gagal");
-    exit;
+    $_SESSION['error'] = "Gagal mengirim survey!";
 }
 
-// kembali ke dashboard user
 header("Location: ../dashboard.php");
 exit;
