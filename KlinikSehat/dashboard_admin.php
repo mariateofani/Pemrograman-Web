@@ -169,6 +169,7 @@ $data = mysqli_query($koneksi, "SELECT * FROM survey");
         <th class="p-2">Nama</th>
         <th class="p-2">Tanggal lahir</th>
         <th class="p-2">JK</th>
+        <th class="p-2">Provinsi</th>
         <th class="p-2">HP</th>
         <th class="p-2">Total Skor</th>
       </tr>
@@ -179,6 +180,7 @@ $data = mysqli_query($koneksi, "SELECT * FROM survey");
           <td class="p-2"><?= $d['nama'] ?></td>
           <td class="p-2"><?= $d['tanggal_lahir'] ?></td>
           <td class="p-2"><?= $d['jenis_kelamin'] ?></td>
+          <td class="p-2"><?= $d['provinsi'] ?></td>
           <td class="p-2"><?= $d['no_hp'] ?></td>
           <td class="p-2"><?= $d['total_skor'] ?></td>
         </tr>

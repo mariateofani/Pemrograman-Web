@@ -34,27 +34,47 @@
         class="bg-white p-6 rounded-xl shadow space-y-6">
 
     <!-- DATA PASIEN -->
-    <div>
-        <h2 class="text-lg font-bold mb-3">Data Pasien</h2>
-
+    <div class= p-5>
+        <h2 class="text-center text-lg font-bold mb-3">Data Pasien</h2>
+        <h3 class="text-lg font-bold mb-1">
+            Nama
+        </h3>
         <input type="text" name="nama" placeholder="Nama Pasien"
              class="w-full border p-2 rounded mb-3" required>
+        <h3 class="text-lg font-bold mb-1">
+            Tanggal Lahir
+        </h3>
         <input type="date" name="tanggal_lahir" placeholder="Tanggal Lahir"
         class="w-full border p-2 rounded mb-3" required>
+        <h3 class="text-lg font-bold mb-1">
+            Jenis Kelamin
+        </h3>
+
         <select name="jenis_kelamin" 
             class="w-full border p-2 rounded mb-3" required>
                 <option value="">Pilih Jenis Kelamin</option>
                 <option value="L">Laki-laki</option>
                 <option value="P">Perempuan</option>
         </select>
+        
+        <h3 class="text-lg font-bold mb-1">
+            Provinsi
+        </h3>
+        <select id="provinsi" name="provinsi"
+            class="w-full border p-2 rounded mb-3" required>
+            <option value="">Pilih Provinsi</option>
+        </select>
+        <h3 class="text-lg font-bold mb-1">
+            No. HP Pasien
+        </h3>
         <input type="text" name="no_hp" placeholder="No. HP Pasien"
-             class="w-full border p-2 rounded" required>
+             class="w-full border p-2 rounded" required mb-10>
 
     </div>
 
     <!-- PERTANYAAN -->
-    <div>
-      <h2 class="text-lg font-bold mb-3">Pertanyaan Survei</h2>
+    <div class="p-5">
+      <h2 class="text-center text-lg font-bold mb-5">Pertanyaan Survei</h2>
 
       <?php
       $pertanyaan = [
@@ -90,7 +110,7 @@
     </div>
 
     <!-- KOMENTAR -->
-    <div>
+    <div class= p-5>
       <h2 class="text-lg font-bold mb-2">Kritik & Saran</h2>
 
       <textarea name="komentar" rows="4"
@@ -100,13 +120,33 @@
 
     <!-- BUTTON -->
     <button type="submit"
-            class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 w-full">
+            class="p-5 bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 w-full">
       Kirim Survey
     </button>
 
   </form>
 </form>
 </div>
-<script src="assets/js/scriptsurvey.js"></script>
+<script>
+fetch("API/get_alamat.php")
+  .then(response => response.json())
+  .then(res => {
+    console.log(res); // buat debug
+
+    let data = res.data[1]; // ambil data provinsi
+
+    let select = document.getElementById("provinsi");
+
+    data.forEach(item => {
+      let option = document.createElement("option");
+      option.value = item.domain_id;
+      option.textContent = item.domain_name;
+      select.appendChild(option);
+    });
+  })
+  .catch(error => {
+    console.error("Error ambil data BPS:", error);
+  });
+</script>
 </body>
 </html>
