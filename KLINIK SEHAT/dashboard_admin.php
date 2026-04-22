@@ -177,9 +177,9 @@ $data = mysqli_query($koneksi, "SELECT * FROM survey");
         <?php while($d = mysqli_fetch_assoc($data)) { ?>
         <tr class="border-t">
           <td class="p-2"><?= $d['nama'] ?></td>
-          <td class="p-2"><?= $d['tgl_lahir'] ?></td>
-          <td class="p-2"><?= $d['jk'] ?></td>
-          <td class="p-2"><?= $d['hp'] ?></td>
+          <td class="p-2"><?= $d['tanggal_lahir'] ?></td>
+          <td class="p-2"><?= $d['jenis_kelamin'] ?></td>
+          <td class="p-2"><?= $d['no_hp'] ?></td>
           <td class="p-2"><?= $d['total_skor'] ?></td>
         </tr>
         <?php } ?>
@@ -203,14 +203,48 @@ $data = mysqli_query($koneksi, "SELECT * FROM survey");
   <div class="bg-white p-6 rounded shadow">
     <h2 class="text-xl font-bold mb-4">Grafik Kepuasan</h2>
 
-    <!-- nanti bisa ganti Chart.js -->
-    <img src="https://www.chartjs.org/img/chartjs-logo.svg" class="w-40 mb-4">
+    <!-- CANVAS GRAFIK -->
+    <canvas id="myChart" class="mb-4"></canvas>
 
     <p class="text-gray-600">
-      Grafik akan menampilkan rata-rata kepuasan dari hasil survey.
+      Grafik menampilkan rata-rata kepuasan dari hasil survey.
     </p>
   </div>
 </section>
+
+<?php
+// ambil rata-rata skor dari database
+$result = mysqli_query($koneksi, "SELECT AVG(total_skor) as rata FROM survey");
+$row = mysqli_fetch_assoc($result);
+$rata = $row['rata'] ? round($row['rata'], 2) : 0;
+?>
+
+<!-- CDN Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+const ctx = document.getElementById('myChart');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Kepuasan Pasien'],
+        datasets: [{
+            label: 'Rata-rata Skor',
+            data: [<?= $rata ?>],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 40
+            }
+        }
+    }
+});
+</script>
 
 </body>
 </html>
