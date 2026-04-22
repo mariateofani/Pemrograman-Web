@@ -1,6 +1,9 @@
 <?php
 include 'service/koneksi.php';
-
+if (!isset($_SESSION['email']) || $_SESSION['role'] != 'admin') {
+    header("Location: login.php");
+    exit;
+}
 $id = $_GET['id'];
 
 $data = mysqli_fetch_assoc(
