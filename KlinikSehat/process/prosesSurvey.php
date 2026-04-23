@@ -6,6 +6,7 @@ include "../service/koneksi.php";
 $nama = $_POST['nama'];
 $tanggal_lahir = $_POST['tanggal_lahir'];
 $jenis_kelamin = $_POST['jenis_kelamin'];
+$provinsi = $_POST['provinsi'];
 $no_hp = $_POST['no_hp'];
 
 // JAWABAN SURVEY
