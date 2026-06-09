@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klinik Sehat - Sistem Layanan Kesehatan Digital</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+<!-- ===================== -->
+<!-- NAVBAR -->
+<!-- ===================== -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+
+        <div class="flex items-center gap-2">
+            <span class="text-2xl">🏥</span>
+            <h1 class="font-bold text-blue-600 text-xl">
+                Klinik Sehat
+            </h1>
+        </div>
+
+        <div class="hidden md:flex items-center gap-6 text-gray-600 text-sm font-medium">
+            <a href="#layanan" class="hover:text-blue-600 transition">
+                Layanan
+            </a>
+
+            <a href="#kontak" class="hover:text-blue-600 transition">
+                Kontak
+            </a>
+        </div>
+
+        <div class="flex items-center gap-3">
+
+            <a href="/login"
+               class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition shadow-md text-sm font-medium">
+                Login
+            </a>
+
+            <a href="/register"
+               class="border border-blue-600 text-blue-600 px-5 py-2 rounded-lg hover:bg-blue-50 transition text-sm font-medium">
+                Daftar
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- ===================== -->
+<!-- HERO SECTION -->
+<!-- ===================== -->
+<section class="bg-sky-100 py-20">
+
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-10 px-6">
+
+        <div>
+
+            <h1 class="text-4xl md:text-5xl font-bold text-blue-700 mt-4 mb-6 leading-tight">
+                Selamat Datang di <br>
+                <span class="text-blue-900">Klinik Sehat</span>
+            </h1>
+
+            <p class="text-gray-600 mb-8 text-lg leading-relaxed">
+                Klinik Sehat menyediakan layanan kesehatan modern dengan sistem digital
+                untuk mempermudah pasien mendapatkan pelayanan secara cepat,
+                mudah, dan realtime.
+            </p>
+
+            <div class="flex flex-wrap gap-3">
+
+                <a href="/register"
+                   class="bg-blue-600 text-white px-7 py-3 rounded-lg hover:bg-blue-700 transition shadow-md font-semibold">
+                    Daftar Sekarang
+                </a>
+
+                <a href="#layanan"
+                   class="border border-blue-600 text-blue-600 px-7 py-3 rounded-lg hover:bg-blue-50 transition font-semibold">
+                    Lihat Layanan ↓
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="relative">
+
+            <img
+                src="https://img.freepik.com/free-vector/doctor-character-background_1270-84.jpg"
+                class="rounded-2xl shadow-2xl w-full object-cover"
+                alt="Ilustrasi Klinik Sehat"
+            >
+
+            <div class="absolute -bottom-4 -left-4 bg-white shadow-lg rounded-xl px-4 py-3 flex items-center gap-2">
+
+                <span class="text-green-500 text-xl">✅</span>
+
+                <div>
+                    <p class="text-xs text-gray-500">
+                        Status Pelayanan
+                    </p>
+
+                    <p class="text-sm font-bold text-green-600">
+                        Aktif & Terpercaya
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================== -->
+<!-- INFORMASI KLINIK -->
+<!-- ===================== -->
+<section class="max-w-6xl mx-auto py-16 px-6">
+
+    <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">
+        Informasi Klinik
+    </h2>
+
+    <div class="w-16 h-1 bg-blue-600 mx-auto mb-6 rounded"></div>
+
+    <p class="text-center text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+        Klinik Sehat memberikan pelayanan kesehatan umum,
+        pemeriksaan rutin, konsultasi dokter,
+        serta berbagai layanan kesehatan lainnya untuk masyarakat.
+        Kami berkomitmen memberikan pelayanan yang ramah,
+        cepat, dan profesional.
+    </p>
+
+</section>
+
+<!-- ===================== -->
+<!-- LAYANAN -->
+<!-- ===================== -->
+<section id="layanan" class="bg-gray-50 py-20">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center mb-14">
+
+            <h2 class="text-4xl font-bold text-gray-800 mb-3">
+                Layanan Klinik
+            </h2>
+
+            <div class="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
+
+            <p class="text-gray-500 mt-4 max-w-2xl mx-auto">
+                Kami menyediakan berbagai layanan kesehatan modern
+                dengan tenaga medis profesional.
+            </p>
+
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+            <!-- Card 1 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+                <img
+                    src="https://i.pinimg.com/736x/20/95/a7/2095a72f390f72074776019b7004d776.jpg"
+                    alt="Pemeriksaan Umum"
+                    class="w-full h-56 object-cover"
+                >
+
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">
+                        Pemeriksaan Umum
+                    </h3>
+
+                    <p class="text-gray-600">
+                        Pemeriksaan kesehatan menyeluruh oleh tenaga medis profesional.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+                <img
+                    src="https://i.pinimg.com/736x/bc/cb/37/bccb37b604d37d26e1f506522af1b4ad.jpg"
+                    alt="Konsultasi Dokter"
+                    class="w-full h-56 object-cover"
+                >
+
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">
+                        Konsultasi Dokter
+                    </h3>
+
+                    <p class="text-gray-600">
+                        Konsultasi langsung dengan dokter profesional.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+
+                <img
+                    src="https://i.pinimg.com/736x/6e/b1/1a/6eb11a8180352442c3ee0d168d765608.jpg"
+                    alt="Pelayanan Gigi"
+                    class="w-full h-56 object-cover"
+                >
+
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">
+                        Pelayanan Gigi
+                    </h3>
+
+                    <p class="text-gray-600">
+                        Perawatan kesehatan gigi dan mulut oleh dokter gigi profesional.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================== -->
+<!-- FOOTER -->
+<!-- ===================== -->
+<section id="kontak" class="bg-gray-800 text-white py-10">
+
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+
+        <div>
+            <div class="flex items-center gap-2 mb-3">
+                <span class="text-2xl">🏥</span>
+                <h3 class="font-bold text-xl">Klinik Sehat</h3>
+            </div>
+
+            <p class="text-gray-400 text-sm">
+                Sistem Layanan Kesehatan Digital yang modern,
+                cepat, dan terpercaya.
+            </p>
+        </div>
+
+        <div>
+            <h3 class="font-bold mb-3 text-lg">
+                Tautan Cepat
+            </h3>
+
+            <ul class="space-y-2 text-gray-400 text-sm">
+                <li><a href="#layanan" class="hover:text-white">Layanan Klinik</a></li>
+                <li><a href="/login" class="hover:text-white">Login</a></li>
+                <li><a href="/register" class="hover:text-white">Daftar Akun</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="font-bold mb-3 text-lg">
+                Kontak
+            </h3>
+
+            <ul class="space-y-2 text-gray-400 text-sm">
+                <li>📧 info@kliniksehat.id</li>
+                <li>📞 (0271) 123-4567</li>
+                <li>📍 Surakarta, Jawa Tengah</li>
+                <li>🕒 Senin – Sabtu, 08.00 – 20.00</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500 text-sm">
+        © 2026 Klinik Sehat Digital. Hak cipta dilindungi.
+    </div>
+
+</section>
+
+</body>
+</html>
+```
